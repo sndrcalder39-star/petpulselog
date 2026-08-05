@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Pulse Landing — Fernly</title>
+  <style>
+    :root {
+      --bg-cream: #FDFBF7;
+      --text-dark-sage: #2C3E2B;
+      --bg-pale-sage: #E8ECE7;
+      --accent-gold: #C9A227;
+      --accent-gold-dark: #9C7A18;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark-sage);
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- NAVIGATION --- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark-sage);
+      font-weight: 500;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      background-color: var(--bg-cream);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .hero-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero .subhead {
+      font-size: 1.35rem;
+      font-weight: 500;
+      max-width: 680px;
+      margin: 0 auto 40px auto;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--text-dark-sage);
+      color: var(--bg-cream);
+      border: 2px solid var(--text-dark-sage);
+    }
+
+    .btn-primary:hover {
+      background-color: #1E2B1E;
+      border-color: #1E2B1E;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-dark-sage);
+      border: 2px solid var(--text-dark-sage);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(44, 62, 43, 0.05);
+    }
+
+    /* --- FEATURES SECTION --- */
+    .features {
+      background-color: var(--bg-pale-sage);
+      padding: 80px 24px;
+    }
+
+    .features-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .feature-card {
+      background-color: var(--white);
+      padding: 36px 28px;
+      border-radius: 12px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    /* --- PREMIUM TEASER SECTION --- */
+    .premium-teaser {
+      background-color: var(--bg-cream);
+      padding: 90px 24px;
+      text-align: center;
+    }
+
+    .premium-container {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 40px;
+      border: 2px solid var(--accent-gold);
+      border-radius: 16px;
+      position: relative;
+    }
+
+    .premium-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--accent-gold);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 16px;
+      border-radius: 20px;
+    }
+
+    .btn-gold-gradient {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+      color: var(--white);
+      border: none;
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.3);
+    }
+
+    .btn-gold-gradient:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    /* --- FAQ SECTION --- */
+    .faq {
+      background-color: var(--bg-pale-sage);
+      padding: 80px 24px;
+    }
+
+    .faq-container {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.25rem;
+    }
+
+    .faq-item {
+      background-color: var(--white);
+      margin-bottom: 16px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      outline: none;
+      text-align: left;
+      padding: 20px 24px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark-sage);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-icon {
+      transition: transform 0.2s ease;
+      font-size: 1.2rem;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease-out;
+      padding: 0 24px;
+    }
+
+    .faq-answer p {
+      padding-bottom: 20px;
+      color: var(--text-dark-sage);
+      opacity: 0.85;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 250px;
+    }
+
+    /* --- MODAL DIALOG --- */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(44, 62, 43, 0.4);
+      backdrop-filter: blur(4px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background-color: var(--bg-cream);
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 450px;
+      width: 90%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      text-align: center;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-dark-sage);
+    }
+
+    .modal-card h3 {
+      font-size: 1.75rem;
+      margin-bottom: 12px;
+    }
+
+    .modal-card p {
+      margin-bottom: 24px;
+      opacity: 0.85;
+    }
+
+    .waitlist-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .waitlist-input {
+      padding: 14px;
+      border: 2px solid var(--bg-pale-sage);
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      color: var(--text-dark-sage);
+      background-color: var(--white);
+    }
+
+    .waitlist-input:focus {
+      border-color: var(--accent-gold);
+    }
+
+    .btn-submit {
+      background-color: var(--text-dark-sage);
+      color: var(--bg-cream);
+      border: none;
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn-submit:hover {
+      background-color: #1E2B1E;
+    }
+
+    .success-panel {
+      display: none;
+      padding: 20px 0;
+    }
+    .success-panel h4 {
+      font-size: 1.5rem;
+      color: var(--text-dark-sage);
+      margin-bottom: 8px;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--bg-pale-sage);
+      background-color: var(--bg-cream);
+    }
+
+    /* --- RESPONSIVE LAYOUTS --- */
+    @media (max-width: 900px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.25rem; }
+      .cta-group { flex-direction: column; }
+      .btn { width: 100%; }
+      nav { flex-direction: column; gap: 16px; }
+      .modal-card { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Fernly</div>
+    <ul class="nav-links">
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Premium</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Your Pet's Complete Wellness Dashboard</h1>
+      <p class="subhead">A secure mobile dashboard to track your pet's health history, manage prescriptions, and export instant reports for your clinic.</p>
+      <div class="cta-group">
+        <button class="btn btn-primary trigger-waitlist">Create Free Account</button>
+        <a href="#" class="btn btn-secondary">Learn How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="features-container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Medical Logging</h3>
+          <p>Keep a definitive timeline of veterinary diagnoses, prescriptions, and historical clinic visits.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Smart Reminders</h3>
+          <p>Never miss a dose. Get tailored, timely notifications for upcoming medication windows and vaccinations.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Vet Reports</h3>
+          <p>Compile and export encrypted health summaries directly to your clinic ahead of your next checkup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="premium-teaser">
+    <div class="premium-container">
+      <span class="premium-badge">Premium Tier</span>
+      <h2>Upgrade to Pro</h2>
+      <p>Unlock advanced syncing, historical charts, and continuous backup for your pet's entire medical background.</p>
+      <button class="btn btn-gold-gradient trigger-waitlist">Upgrade Your Plan</button>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq">
+    <div class="faq-container">
+
