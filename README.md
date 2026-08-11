@@ -1,1 +1,194 @@
-<form class="email-form" action="https://formspree.io" method="POST">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Pulse Log — Track Your Pet's Health Timeline</title>
+  <style>
+    :root {
+      --bg-cream: #FDFBF7;
+      --text-sage: #2C3E2B;
+      --accent-gold: #D4AF37;
+      --dark-gray: #333333;
+      --light-gray: #666666;
+    }
+    body {
+      background-color: var(--bg-cream);
+      color: var(--dark-gray);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .banner-tag {
+      color: var(--light-gray);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: var(--text-sage);
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 16px 0;
+    }
+    .description-box {
+      font-size: 16px;
+      font-weight: normal;
+      color: var(--text-sage);
+      line-height: 1.6;
+      margin: 24px 0;
+      padding: 10px;
+    }
+    .heading-accent {
+      color: var(--text-sage);
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 40px;
+      letter-spacing: 0.5px;
+    }
+    .image-placeholder {
+      background-color: #eae5db;
+      border-radius: 12px;
+      padding: 60px 20px;
+      margin: 20px 0;
+      border: 2px dashed #b5ad9e;
+    }
+    .image-placeholder p {
+      margin: 0;
+      color: var(--text-sage);
+      font-weight: 500;
+    }
+    .features-list {
+      text-align: left;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(44,62,43,0.05);
+      margin: 30px 0;
+    }
+    .features-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .features-list li {
+      margin-bottom: 12px;
+      font-size: 15px;
+      position: relative;
+      padding-left: 25px;
+    }
+    .features-list li::before {
+      content: "🐾";
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+    .quote-box {
+      font-size: 15px;
+      font-weight: normal;
+      color: var(--dark-gray);
+      line-height: 1.6;
+      margin: 40px 0;
+      padding: 20px;
+      border-left: 3px solid var(--accent-gold);
+      background: rgba(212,175,55,0.05);
+      text-align: left;
+      font-style: italic;
+    }
+    .quote-author {
+      display: block;
+      font-size: 13px;
+      color: var(--light-gray);
+      font-style: normal;
+      margin-top: 8px;
+    }
+    .cta-section {
+      margin-top: 40px;
+      background: #ffffff;
+      padding: 30px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(212,175,55,0.3);
+    }
+    .cta-text {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .email-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .email-input {
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+    .email-input:focus {
+      border-color: var(--text-sage);
+    }
+    .submit-btn {
+      background-color: var(--accent-gold);
+      color: #ffffff;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .submit-btn:hover {
+      background-color: #c49f2e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="banner-tag">🐾 NOW IN PRIVATE TESTING</div>
+    <h1>Track your pet's health.<br>Know when to see the vet.</h1>
+    <div class="description-box">
+      A secure mobile dashboard to track your pet's health history, manage prescriptions, and export instant reports for your clinic.
+    </div>
+    <div class="heading-accent">TOTAL CONTROL</div>
+    <div class="image-placeholder">
+      <p>📸 Concerned Pet Owner Visual Container</p>
+      <span style="font-size:12px; color:var(--light-gray);">Image uploads into this container smoothly</span>
+    </div>
+    <div class="features-list">
+      <h3 style="margin-top:0; color:var(--text-sage);">What's Included in Premium:</h3>
+      <ul>
+        <li><strong>Unlimited Health Logs</strong> — Track every symptom, diagnosis, and medication with no limits.</li>
+        <li><strong>Medication Reminders</strong> — Set automated phone alerts so you never miss a daily dose.</li>
+        <li><strong>One-Click Vet Reports</strong> — Instantly export your pet's complete history for faster clinic check-ins.</li>
+        <li><strong>Multiple Pet Profiles</strong> — Keep accurate medical records for every pet in your household.</li>
+      </ul>
+    </div>
+    <div class="quote-box">
+      "During Max's allergy flare-up, I forgot exactly when his last pill was. Having his entire prescription history right on my phone saved our vet visit. This app is an absolute lifesaver."
+      <span class="quote-author">— Sarah M., Golden Retriever Owner</span>
+    </div>
+    <div class="cta-section">
+      <div class="cta-text">🔒 Join the private beta today. The first 100 pet owners lock in 50% off Premium for life when the mobile app launches.</div>
+      <form class="email-form" action="https://formspree.io" method="POST">
+        <input type="email" class="email-input" name="email" placeholder="Enter your email address" required>
+        <button type="submit" class="submit-btn">Secure My Spot 🐾</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
