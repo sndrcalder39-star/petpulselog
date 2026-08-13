@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -183,8 +183,8 @@
     </div>
     <div class="cta-section">
       <div class="cta-text">🔒 Join the private beta today. The first 100 pet owners lock in 50% off Premium for life when the mobile app launches.</div>
-      <form class="email-form" onsubmit="event.preventDefault(); alert('Thank you for joining the waitlist! We will secure your spot.');">
-        <input type="email" class="email-input" placeholder="Enter your email address" required>
+      <form class="email-form" action="https://submit-form.com" method="POST">
+        <input type="email" class="email-input" name="email" placeholder="Enter your email address" required>
         <button type="submit" class="submit-btn">Secure My Spot 🐾</button>
       </form>
     </div>
