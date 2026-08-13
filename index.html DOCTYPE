@@ -10,7 +10,7 @@
       --text-sage: #2C3E2B;
       --accent-gold: #D4AF37;
       --dark-gray: #333333;
-      --light-gray: #666666;
+      --light-gray: #666666; 
     }
     body {
       background-color: var(--bg-cream);
