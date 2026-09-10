@@ -108,7 +108,8 @@
       font-style: italic;
     }
     .quote-author {
-      display: block;      font-size: 13px;
+      display: block;
+      font-size: 13px;
       color: var(--light-gray);
       font-style: normal;
       margin-top: 8px;
@@ -126,7 +127,8 @@
       margin-bottom: 20px;
     }
     .email-form {
-      display: flex;      flex-direction: column;
+      display: flex;
+      flex-direction: column;
       gap: 12px;
     }
     .email-input {
@@ -189,4 +191,4 @@
     </div>
   </div>
 </body>
-</html> 
+</html>
