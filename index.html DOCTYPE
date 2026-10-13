@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,14 +9,22 @@
     <script src="https://jsdelivr.net"></script>
     <style>
         body { background-color: #0f172a; color: #f8fafc; font-family: sans-serif; }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(20, 184, 166, 0.3);
+        }
     </style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-4">
 
     <!-- App Wrapper Container -->
     <div class="w-full max-w-md bg-slate-800 p-6 rounded-2xl shadow-xl border border-slate-700">
-        <h1 class="text-2xl font-bold text-center text-teal-400 mb-2">🐾 PetPulse Log</h1>
-        <p class="text-xs text-center text-slate-400 uppercase tracking-widest font-semibold mb-6">Now In Private Testing</p>
+        
+        <!-- App Icon Header Integration -->
+        <div class="flex flex-col items-center mb-4">
+            <img src="icon.png" alt="PetPulse Log Icon" class="w-24 h-24 rounded-2xl border border-teal-500/30 shadow-lg neon-glow mb-3 object-cover">
+            <h1 class="text-2xl font-bold text-center text-teal-400">🐾 PetPulse Log</h1>
+            <p class="text-xs text-center text-slate-400 uppercase tracking-widest font-semibold mt-1">Now In Private Testing</p>
+        </div>
 
         <!-- Dynamic Success Message Alert -->
         <div id="successAlert" class="hidden mb-4 p-3 bg-teal-500/20 border border-teal-500 text-teal-300 rounded-lg text-sm text-center">
