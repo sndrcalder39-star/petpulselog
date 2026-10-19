@@ -1,104 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetPulse Log - Private Testing</title>
-    <!-- Tailwind CSS for sleek styling matching your theme -->
+    <!-- Tailwind CSS for modern responsive styling -->
     <script src="https://jsdelivr.net"></script>
     <style>
         body { background-color: #0f172a; color: #f8fafc; font-family: sans-serif; }
-        .neon-glow {
-            box-shadow: 0 0 15px rgba(20, 184, 166, 0.3);
-        }
+        .neon-glow { box-shadow: 0 0 15px rgba(20, 184, 166, 0.3); }
     </style>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen p-4">
+<body class="flex flex-col items-center justify-start min-h-screen p-4 py-12">
 
     <!-- App Wrapper Container -->
-    <div class="w-full max-w-md bg-slate-800 p-6 rounded-2xl shadow-xl border border-slate-700">
+    <div class="w-full max-w-xl bg-slate-800 p-6 md:p-8 rounded-2xl shadow-xl border border-slate-700 space-y-6">
         
-        <!-- App Icon Header Integration -->
-        <div class="flex flex-col items-center mb-4">
-            <img src="icon.png" alt="PetPulse Log Icon" class="w-24 h-24 rounded-2xl border border-teal-500/30 shadow-lg neon-glow mb-3 object-cover">
-            <h1 class="text-2xl font-bold text-center text-teal-400">🐾 PetPulse Log</h1>
-            <p class="text-xs text-center text-slate-400 uppercase tracking-widest font-semibold mt-1">Now In Private Testing</p>
+        <!-- App Icon Header -->
+        <div class="flex flex-col items-center border-b border-slate-700/60 pb-6">
+            <img src="icon.png" alt="PetPulse Log Icon" class="w-24 h-24 rounded-2xl border border-teal-500/30 shadow-lg neon-glow mb-4 object-cover">
+            <h1 class="text-3xl font-extrabold text-center text-teal-400 tracking-tight">🐾 PetPulse Log</h1>
+            <p class="text-sm text-slate-300 text-center max-w-md mt-3 leading-relaxed">
+                A secure mobile dashboard to track your pet's health history, manage prescriptions, and export instant reports for your clinic.
+            </p>
+            <span class="mt-4 px-3 py-1 bg-teal-500/10 border border-teal-500/30 text-teal-300 font-bold text-xs rounded-full uppercase tracking-widest">
+                TOTAL CONTROL
+            </span>
         </div>
 
-        <!-- Dynamic Success Message Alert -->
-        <div id="successAlert" class="hidden mb-4 p-3 bg-teal-500/20 border border-teal-500 text-teal-300 rounded-lg text-sm text-center">
-            🎉 Successfully registered for private testing access!
+        <!-- Concerned Pet Owner Visual Container Placeholder -->
+        <div class="w-full h-48 bg-slate-900 border-2 border-dashed border-slate-700 rounded-xl flex flex-col items-center justify-center p-4 text-center group transition hover:border-teal-500/40">
+            <div class="bg-slate-800 p-3 rounded-full mb-2">
+                <svg class="w-6 h-6 text-slate-400 group-hover:text-teal-400 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            </div>
+            <p class="text-sm font-semibold text-slate-300">📸 Concerned Pet Owner Visual Container</p>
+            <p class="text-xs text-slate-500 mt-1">Image uploads into this container smoothly</p>
         </div>
 
-        <!-- Testing Access Registration Form -->
-        <form id="logSignupForm" class="space-y-4">
-            <div>
-                <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Tester Name</label>
-                <input type="text" id="testerName" required class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-teal-400 text-sm" placeholder="Your Name">
-            </div>
-            <div>
-                <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Email Address</label>
-                <input type="email" id="testerEmail" required class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-teal-400 text-sm" placeholder="name@example.com">
-            </div>
-            <button type="submit" class="w-full bg-teal-500 hover:bg-teal-600 text-slate-900 font-bold p-3 rounded-lg transition text-sm cursor-pointer shadow-md shadow-teal-500/10">
-                Request Testing Link
-            </button>
-        </form>
+        <!-- Premium Feature Checklist -->
+        <div class="bg-slate-900/40 border border-slate-700/50 rounded-xl p-5 space-y-4">
+            <h3 class="text-xs font-bold text-teal-400 uppercase tracking-wider">What's Included in Premium:</h3>
+            <ul class="space-y-3 text-sm">
+                <li class="flex items-start gap-3">
+                    <span class="text-teal-400 font-bold mt-0.5">✓</span>
+                    <div><strong class="text-white">Unlimited Health Logs</strong> — Track every symptom, diagnosis, and medication with no limits.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-teal-400 font-bold mt-0.5">✓</span>
+                    <div><strong class="text-white">Medication Reminders</strong> — Set automated phone alerts so you never miss a daily dose.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-teal-400 font-bold mt-0.5">✓</span>
+                    <div><strong class="text-white">One-Click Vet Reports</strong> — Instantly export your pet's complete history for faster clinic check-ins.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-teal-400 font-bold mt-0.5">✓</span>
+                    <div><strong class="text-white">Multiple Pet Profiles</strong> — Keep accurate medical records for every pet in your household.</div>
+                </li>
+            </ul>
+        </div>
 
-        <!-- Feature Previews (Interactive Log Counters) -->
-        <div class="mt-8 pt-6 border-t border-slate-700/60 space-y-3">
-            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Live Demo Logger</h3>
-            <div class="flex items-center justify-between bg-slate-900/50 p-3 rounded-xl border border-slate-700/40">
-                <span class="text-sm font-medium">Heart Rate Vitals Logged</span>
-                <div class="flex items-center gap-3">
-                    <span id="logCount" class="text-sm font-bold text-teal-400 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-700">0</span>
-                    <button id="addLogBtn" class="bg-teal-500/10 hover:bg-teal-500/20 text-teal-400 border border-teal-500/30 px-3 py-1 rounded-lg text-xs font-semibold transition cursor-pointer">+ Log Vital</button>
+        <!-- Testimonial Section -->
+        <div class="bg-slate-900/20 border-l-4 border-teal-500/40 p-4 italic text-slate-300 text-sm rounded-r-xl leading-relaxed">
+            "During Max's allergy flare-up, I forgot exactly when his last pill was. Having his entire prescription history right on my phone saved our vet visit. This app is an absolute lifesaver." 
+            <span class="block mt-2 font-semibold text-xs text-slate-400 not-italic">— Sarah M., Golden Retriever Owner</span>
+        </div>
+
+        <!-- Beta Registration Footer Action Form -->
+        <div class="pt-4 border-t border-slate-700/60 space-y-4">
+            <p class="text-xs text-center text-slate-400 max-w-sm mx-auto leading-relaxed">
+                🔒 Join the private beta today. The first 100 pet owners lock in <span class="text-teal-400 font-bold">50% off Premium for life</span> when the mobile app launches.
+            </p>
+
+            <form id="betaForm" class="space-y-3">
+                <div id="successAlert" class="hidden p-3 bg-teal-500/20 border border-teal-500 text-teal-300 rounded-lg text-xs text-center font-medium">
+                    🎉 Spot secured! You are on the 50% lifetime discount list.
                 </div>
-            </div>
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input type="email" id="betaEmail" required class="flex-1 bg-slate-900 border border-slate-700 rounded-xl p-3 text-white focus:outline-none focus:border-teal-400 text-sm" placeholder="Enter your email address">
+                    <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-slate-900 font-extrabold px-6 py-3 rounded-xl transition text-sm cursor-pointer shadow-lg shadow-teal-500/10 whitespace-nowrap">
+                        Secure My Spot 🐾
+                    </button>
+                </div>
+            </form>
         </div>
+
     </div>
 
-    <!-- JavaScript Interactive Logic Engine -->
+    <!-- Interactive Script Logic -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('logSignupForm');
+            const form = document.getElementById('betaForm');
             const alertBox = document.getElementById('successAlert');
-            const logCountSpan = document.getElementById('logCount');
-            const addLogBtn = document.getElementById('addLogBtn');
+            const emailInput = document.getElementById('betaEmail');
 
-            // Load saved interactive log count from device local memory
-            let storedLogs = localStorage.getItem('petPulseDemoCount') || 0;
-            logCountSpan.textContent = storedLogs;
-
-            // Handle testing sign up form submission event
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
                 
-                const testerData = {
-                    name: document.getElementById('testerName').value,
-                    email: document.getElementById('testerEmail').value,
-                    timestamp: new Date().toISOString()
+                const registration = {
+                    email: emailInput.value,
+                    date: new Date().toISOString()
                 };
 
-                // Store submission details securely in client profile log
-                localStorage.setItem('petPulseTesterProfile', JSON.stringify(testerData));
-                console.log('New Private Tester Logged:', testerData);
-
-                // Reset layout display state to reveal greeting confirmation
-                form.reset();
-                alertBox.classList.remove('hidden');
+                localStorage.setItem('petPulseBetaUser', JSON.stringify(registration));
                 
-                setTimeout(() => {
-                    alertBox.classList.add('hidden');
-                }, 5000);
-            });
-
-            // Interactive demo counter button listener logic
-            addLogBtn.addEventListener('click', () => {
-                storedLogs++;
-                localStorage.setItem('petPulseDemoCount', storedLogs);
-                logCountSpan.textContent = storedLogs;
+                emailInput.classList.add('hidden');
+                form.querySelector('button').classList.add('hidden');
+                alertBox.classList.remove('hidden');
             });
         });
     </script>
