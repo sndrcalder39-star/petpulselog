@@ -26,16 +26,7 @@
             <span class="mt-4 px-3 py-1 bg-teal-500/10 border border-teal-500/30 text-teal-300 font-bold text-xs rounded-full uppercase tracking-widest">
                 TOTAL CONTROL
             </span>
-        </div>
-
-        <!-- Concerned Pet Owner Visual Container Placeholder -->
-        <div class="w-full h-48 bg-slate-900 border-2 border-dashed border-slate-700 rounded-xl flex flex-col items-center justify-center p-4 text-center group transition hover:border-teal-500/40">
-            <div class="bg-slate-800 p-3 rounded-full mb-2">
-                <svg class="w-6 h-6 text-slate-400 group-hover:text-teal-400 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-            </div>
-            <p class="text-sm font-semibold text-slate-300">📸 Concerned Pet Owner Visual Container</p>
-            <p class="text-xs text-slate-500 mt-1">Image uploads into this container smoothly</p>
-        </div>
+        
 
         <!-- Premium Feature Checklist -->
         <div class="bg-slate-900/40 border border-slate-700/50 rounded-xl p-5 space-y-4">
@@ -44,7 +35,10 @@
                 <li class="flex items-start gap-3">
                     <span class="text-teal-400 font-bold mt-0.5">✓</span>
                     <div><strong class="text-white">Unlimited Health Logs</strong> — Track every symptom, diagnosis, and medication with no limits.</div>
-                </li>
+                </li><!-- Concerned Pet Owner Visual Container Image -->
+<div class="w-full rounded-xl overflow-hidden border border-slate-700 shadow-md">
+    <img src="dashboard_view.png" alt="Pet Owner Dashboard Preview" class="w-full h-auto object-cover">
+</div>
                 <li class="flex items-start gap-3">
                     <span class="text-teal-400 font-bold mt-0.5">✓</span>
                     <div><strong class="text-white">Medication Reminders</strong> — Set automated phone alerts so you never miss a daily dose.</div>
